@@ -20,4 +20,8 @@ class Movie < ActiveRecord::Base
     Movie.where(id: id).first
   end
 
+  def self.find_movie_with_attributes(attr)
+    Movie.where(attr).first
+  end
+
 end
