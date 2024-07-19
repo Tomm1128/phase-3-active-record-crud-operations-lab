@@ -17,11 +17,11 @@ class Movie < ActiveRecord::Base
   end
 
   def self.find_movie_with_id(id)
-    Movie.where(id: id).first
+    Movie.find(id)
   end
 
   def self.find_movie_with_attributes(attr)
-    Movie.where(attr).first
+    Movie.find_by(attr)
   end
 
 end
